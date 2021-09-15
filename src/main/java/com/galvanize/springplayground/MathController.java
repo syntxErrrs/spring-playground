@@ -22,4 +22,13 @@ public class MathController {
        return mathService.getVolumeString(height, width, length);
     }
 
+    @PostMapping("/area")
+    public String getArea(Shape shape) {
+        String areaString = shape.getType().equals("circle") ?
+                "circle with a radius of " + shape.getRadius() + " is " + shape.getCircleAreaDouble() :
+                shape.getWidth() + "x" + shape.getHeight() + " rectangle is " + shape.getRectangleAreaInteger();
+
+        return "Area of a " + areaString;
+    }
+
 }
