@@ -23,4 +23,15 @@ class MathControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("3.141592653589793"));
     }
+
+    @Test
+    void getVolume() throws Exception {
+        RequestBuilder request = MockMvcRequestBuilders.get("/math/volume/3/4/5");
+
+        this.mvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().string("The volume of a 3x4x5 rectangle is 60"));
+
+    }
+
 }
