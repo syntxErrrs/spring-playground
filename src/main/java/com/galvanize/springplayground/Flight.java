@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Flight {
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "America/Chicago")
     @JsonProperty("Departs")
     public Date departs;
     @JsonProperty("Tickets")

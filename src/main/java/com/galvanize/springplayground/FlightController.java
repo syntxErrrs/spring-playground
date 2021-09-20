@@ -18,7 +18,7 @@ public class FlightController {
     @GetMapping("/flight")
     public ResponseEntity<Flight> getFlight() throws ParseException {
         Flight flight = new Flight(
-                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 09:34"),
+                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 14:34"),
                 new ArrayList<Ticket>() {{
                     add(new Ticket(new Passenger("Some name", "Some other name"), 200));
                 }}
@@ -29,13 +29,13 @@ public class FlightController {
     @GetMapping
     public ResponseEntity<List<Flight>> getFlights() throws ParseException {
         Flight firstFlight = new Flight(
-                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 09:34"),
+                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 14:34"),
                 new ArrayList<Ticket>() {{
                     add(new Ticket(new Passenger("Some name", "Some other name"), 200));
                 }}
         );
         Flight secondFlight = new Flight(
-                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 09:34"),
+                new SimpleDateFormat("yyyy-MM-dd hh:mm").parse("2017-04-21 14:34"),
                 new ArrayList<Ticket>() {{
                     add(new Ticket(new Passenger("Some other name", null), 400));
                 }}
