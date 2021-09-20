@@ -10,28 +10,28 @@ public class Shape {
         return this.type;
     }
 
-    public String getRadius() {
-        return this.radius;
-    }
-
-    public String getHeight() {
-        return this.height;
-    }
-
-    public String getWidth() {
-        return this.width;
-    }
-
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getRadius() {
+        return this.radius;
     }
 
     public void setRadius(String radius) {
         this.radius = radius;
     }
 
+    public String getHeight() {
+        return this.height;
+    }
+
     public void setHeight(String height) {
         this.height = height;
+    }
+
+    public String getWidth() {
+        return this.width;
     }
 
     public void setWidth(String width) {

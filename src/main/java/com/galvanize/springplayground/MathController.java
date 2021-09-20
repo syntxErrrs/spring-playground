@@ -18,8 +18,8 @@ public class MathController {
             @PathVariable String height,
             @PathVariable String width,
             @PathVariable String length
-            ) {
-       return mathService.getVolumeString(height, width, length);
+    ) {
+        return mathService.getVolumeString(height, width, length);
     }
 
     @PostMapping("/area")

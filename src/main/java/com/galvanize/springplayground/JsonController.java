@@ -18,7 +18,7 @@ public class JsonController {
 
     @GetMapping("/people")
     public List<Person> getPeople() {
-        return new ArrayList<Person>(){
+        return new ArrayList<Person>() {
             {
                 add(new Person("Jon", "Phillips"));
                 add(new Person("Smokey", "TheBear"));

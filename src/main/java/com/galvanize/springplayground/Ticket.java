@@ -1,6 +1,5 @@
 package com.galvanize.springplayground;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Ticket {
