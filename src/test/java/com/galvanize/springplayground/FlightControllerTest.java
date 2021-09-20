@@ -58,7 +58,6 @@ class FlightControllerTest {
                 .andExpect(jsonPath("$.[0].Tickets[0].Price", is(price)))
                 .andExpect(jsonPath("$.[1].Departs", is("2017-04-21 14:34")))
                 .andExpect(jsonPath("$.[1].Tickets[0].Passenger.FirstName", is(lastName)))
-                .andExpect(jsonPath("$.[1].Tickets[0].Passenger.LastName", is(nullValue())))
                 .andExpect(jsonPath("$.[1].Tickets[0].Price", is(price+200)));
     }
 

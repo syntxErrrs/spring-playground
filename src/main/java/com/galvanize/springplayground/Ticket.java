@@ -3,7 +3,6 @@ package com.galvanize.springplayground;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Ticket {
     @JsonProperty("Passenger")
     public Passenger passenger;
