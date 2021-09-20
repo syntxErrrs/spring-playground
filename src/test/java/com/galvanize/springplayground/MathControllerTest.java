@@ -39,8 +39,8 @@ class MathControllerTest {
     void getArea() throws Exception {
         RequestBuilder request = MockMvcRequestBuilders.post("/math/area")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .param("type","circle")
-                .param("radius","4");
+                .param("type", "circle")
+                .param("radius", "4");
 
         this.mvc.perform(request)
                 .andExpect(status().isOk())

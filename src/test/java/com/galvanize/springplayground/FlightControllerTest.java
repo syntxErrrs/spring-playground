@@ -7,8 +7,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
-import static org.mockito.ArgumentMatchers.isNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -24,7 +22,7 @@ class FlightControllerTest {
         String firstName = "Some name";
         String lastName = "Some other name";
         int price = 200;
-        Passenger passenger = new Passenger (firstName, lastName);
+        Passenger passenger = new Passenger(firstName, lastName);
         Ticket ticket = new Ticket(passenger, price);
         Ticket[] tickets = {ticket};
 
@@ -58,7 +56,7 @@ class FlightControllerTest {
                 .andExpect(jsonPath("$.[0].Tickets[0].Price", is(price)))
                 .andExpect(jsonPath("$.[1].Departs", is("2017-04-21 14:34")))
                 .andExpect(jsonPath("$.[1].Tickets[0].Passenger.FirstName", is(lastName)))
-                .andExpect(jsonPath("$.[1].Tickets[0].Price", is(price+200)));
+                .andExpect(jsonPath("$.[1].Tickets[0].Price", is(price + 200)));
     }
 
 }
