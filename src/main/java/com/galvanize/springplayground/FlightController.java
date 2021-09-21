@@ -2,14 +2,14 @@ package com.galvanize.springplayground;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/flights")
@@ -45,6 +45,11 @@ public class FlightController {
             add(secondFlight);
         }};
         return new ResponseEntity<>(flights, HttpStatus.OK);
+    }
+
+    @PostMapping("/tickets/total")
+    public ResponseEntity<Map<String, Integer>> calculateTotalCost(@RequestBody Flight flight) {
+        return new ResponseEntity<>(flight.getTotalCost(), HttpStatus.OK);
     }
 
 }
